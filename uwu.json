@@ -1,5 +1,6 @@
 {
-  "weact": "React",
+  "weact": "react",
+  "Weact": "React",
   "useState": "useState",
   "useEffect": "useEffect",
   "impowt": "import",
