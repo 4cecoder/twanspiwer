@@ -1,14 +1,8 @@
 {
   "weact": "react",
   "Weact": "React",
-  "useState": "useState",
-  "useEffect": "useEffect",
   "impowt": "import",
   "fwom": "from",
   "wetuwn": "return",
   "cwassName": "className",
-  "key": "key",
-  "src": "src",
-  "alt": "alt"
-  
 }
