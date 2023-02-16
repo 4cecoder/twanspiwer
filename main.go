@@ -1,32 +1,46 @@
-package main
-
 import (
 	"encoding/json"
-	"fmt"
+	"flag"
 	"io/ioutil"
+	"os"
+	"strings"
 )
 
-// UwuMap is a type that maps uwu keywords to React keywords
-type UwuMap map[string]string
-
 func main() {
-	// Read uwu keyword pairs from a JSON file
-	file, err := ioutil.ReadFile("uwu.json")
+	// Define the flags
+	inputFile := flag.String("input", "react-code.js", "the input file name")
+	outputFile := flag.String("output", "transpiled-code.js", "the output file name")
+	flag.Parse()
+
+	// Load the uwu keyword pairs from the uwu.json file
+	file, err := os.Open("uwu.json")
 	if err != nil {
-		fmt.Println("Error reading uwu.json:", err)
-		return
+		panic(err)
+	}
+	defer file.Close()
+
+	var uwuKeywords map[string]string
+	byteValue, _ := ioutil.ReadAll(file)
+	json.Unmarshal(byteValue, &uwuKeywords)
+
+	// Load the React code to be transpiled
+	file, err = os.Open(*inputFile)
+	if err != nil {
+		panic(err)
+	}
+	defer file.Close()
+
+	byteValue, _ = ioutil.ReadAll(file)
+	reactCode := string(byteValue)
+
+	// Replace the uwu keywords with the React keywords
+	for uwuKeyword, reactKeyword := range uwuKeywords {
+		reactCode = strings.ReplaceAll(reactCode, uwuKeyword, reactKeyword)
 	}
 
-	// Parse JSON into a map of uwu keyword pairs
-	var uwuMap UwuMap
-	err = json.Unmarshal(file, &uwuMap)
+	// Write the transpiled code to a new file
+	err = ioutil.WriteFile(*outputFile, []byte(reactCode), 0644)
 	if err != nil {
-		fmt.Println("Error parsing uwu.json:", err)
-		return
-	}
-
-	// Print out the uwu keyword pairs
-	for uwu, react := range uwuMap {
-		fmt.Println(uwu, "->", react)
+		panic(err)
 	}
 }
