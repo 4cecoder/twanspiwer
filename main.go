@@ -1,40 +1,32 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"strings"
 )
 
+// UwuMap is a type that maps uwu keywords to React keywords
+type UwuMap map[string]string
+
 func main() {
-	// Load the file to transpile
-	filename := "example.jsx"
-	content, err := ioutil.ReadFile(filename)
+	// Read uwu keyword pairs from a JSON file
+	file, err := ioutil.ReadFile("uwuMap.json")
 	if err != nil {
-		fmt.Println("Error reading file:", err)
+		fmt.Println("Error reading uwuMap.json:", err)
 		return
 	}
 
-	// Define the UWU keywords and their replacements
-	replacements := map[string]string{
-		"uwu": "React",
-		"nuzzles": "render",
-		"boops": "props",
-		"snuggles": "state",
-		"glomp": "componentDidMount",
-	}
-
-	// Replace the keywords in the file content
-	for uwu, react := range replacements {
-		content = []byte(strings.ReplaceAll(string(content), uwu, react))
-	}
-
-	// Write the transpiled file back to disk
-	err = ioutil.WriteFile(filename, content, 0644)
+	// Parse JSON into a map of uwu keyword pairs
+	var uwuMap UwuMap
+	err = json.Unmarshal(file, &uwuMap)
 	if err != nil {
-		fmt.Println("Error writing file:", err)
+		fmt.Println("Error parsing uwuMap.json:", err)
 		return
 	}
 
-	fmt.Println("Transpilation complete!")
+	// Print out the uwu keyword pairs
+	for uwu, react := range uwuMap {
+		fmt.Println(uwu, "->", react)
+	}
 }
