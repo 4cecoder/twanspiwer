@@ -11,7 +11,7 @@ type UwuMap map[string]string
 
 func main() {
 	// Read uwu keyword pairs from a JSON file
-	file, err := ioutil.ReadFile("uwuMap.json")
+	file, err := ioutil.ReadFile("uwu.json")
 	if err != nil {
 		fmt.Println("Error reading uwuMap.json:", err)
 		return
