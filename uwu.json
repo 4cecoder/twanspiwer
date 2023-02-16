@@ -1,10 +1,13 @@
 {
-  "uwuComponent": "React.Component",
-  "uwuProps": "props",
-  "uwuRender": "render",
-  "uwuState": "state",
-  "uwuSetState": "setState",
-  "uwuImport": "import",
-  "uwuExport": "export",
-  "uwuDefault": "default"
+  "weact": "React",
+  "useState": "useState",
+  "useEffect": "useEffect",
+  "impowt": "import",
+  "fwom": "from",
+  "wetuwn": "return",
+  "cwassName": "className",
+  "key": "key",
+  "src": "src",
+  "alt": "alt"
+  
 }
