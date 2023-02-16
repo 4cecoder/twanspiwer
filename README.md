@@ -13,6 +13,8 @@ Creating a transpiler to convert regular code to uwu language would require a lo
 
 `git clone https://github.com/4cecoder/twanspiwer` or `gh repo clone 4cecoder/twanspiwer` 
 
+## get depenwencies
+
 ## `cd twanspiwer && go mod tidy`
 
 ## Wun the twanspiwer
