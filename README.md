@@ -1,4 +1,4 @@
-# uwu-transpiler
+# uwu twanspiwer
 
 Package that uses uwu keywords as an alternative syntax for React. 
 
