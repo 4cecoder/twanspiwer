@@ -7,8 +7,13 @@ Creating a transpiler to convert regular code to uwu language would require a lo
 
 # Usage:
 
+# clone project 
+
+`git clone https://github.com/4cecoder/twanspiwer` or `gh repo clone 4cecoder/twanspiwer`
+
+## Wun the twanspiwer
 ```shell
- go run uwu-transpiler.go -input=react-code-with-uwu.js -output=react-code-without-uwu.js
+ go run main.go -input=react-code-with-uwu.js -output=react-code-without-uwu.js
 ```
 
 
