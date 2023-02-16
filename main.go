@@ -13,7 +13,7 @@ func main() {
 	// Read uwu keyword pairs from a JSON file
 	file, err := ioutil.ReadFile("uwu.json")
 	if err != nil {
-		fmt.Println("Error reading uwuMap.json:", err)
+		fmt.Println("Error reading uwu.json:", err)
 		return
 	}
 
@@ -21,7 +21,7 @@ func main() {
 	var uwuMap UwuMap
 	err = json.Unmarshal(file, &uwuMap)
 	if err != nil {
-		fmt.Println("Error parsing uwuMap.json:", err)
+		fmt.Println("Error parsing uwu.json:", err)
 		return
 	}
 
