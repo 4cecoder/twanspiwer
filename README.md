@@ -5,11 +5,15 @@ Package that uses uwu keywords as an alternative syntax for React.
 
 Creating a transpiler to convert regular code to uwu language would require a lot of complex programming and natural language processing. 
 
+# Golang needs to be installed
+
 # Usage:
 
 # clone project 
 
-`git clone https://github.com/4cecoder/twanspiwer` or `gh repo clone 4cecoder/twanspiwer`
+`git clone https://github.com/4cecoder/twanspiwer` or `gh repo clone 4cecoder/twanspiwer` 
+
+## `cd twanspiwer && go mod tidy`
 
 ## Wun the twanspiwer
 ```shell
