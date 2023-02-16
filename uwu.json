@@ -1,0 +1,10 @@
+{
+  "uwuComponent": "React.Component",
+  "uwuProps": "props",
+  "uwuRender": "render",
+  "uwuState": "state",
+  "uwuSetState": "setState",
+  "uwuImport": "import",
+  "uwuExport": "export",
+  "uwuDefault": "default"
+}
