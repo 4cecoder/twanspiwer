@@ -12,7 +12,7 @@ Creating a transpiler to convert regular code to uwu language would require a lo
 ```
 
 
-To transpile a React code with uwu keywords using the key-value pairs in a uwu.json file. 
+To transpile a React code with uwu keywords using the key-value pairs in a `uwu.json` file. 
 
 This code reads the `uwu.json` file and stores its contents in a Go map. 
 
