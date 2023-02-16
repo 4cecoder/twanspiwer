@@ -8,7 +8,7 @@ Creating a transpiler to convert regular code to uwu language would require a lo
 # Usage:
 
 ```shell
-$ go run uwu-transpiler.go -input=react-code-with-uwu.js -output=react-code-without-uwu.js
+ go run uwu-transpiler.go -input=react-code-with-uwu.js -output=react-code-without-uwu.js
 ```
 
 
