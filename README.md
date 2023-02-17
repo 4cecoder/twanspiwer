@@ -12,7 +12,7 @@ Golang needs to be installed.
 
 ### Installation
 
-Cwone the project:
+Cwone the pwoject:
 
 `git clone https://github.com/4cecoder/twanspiwer` or `gh repo clone 4cecoder/twanspiwer` 
 
